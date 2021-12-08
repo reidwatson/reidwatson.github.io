@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+}
+#shadow {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.35);
+    opacity: 1;
+    z-index: -2;
+}
+#backgroundImg {
+    background-image: "chewacla2.jpg";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: -4;
+    object-fit: cover;
+}
+
+h1, h2, h3 {
+    font-family: Verdana, Geneva, sans-serif;
+    letter-spacing: -0.4px;
+    word-spacing: 0px;
+    color: #e9e9e9;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    text-shadow: 2px 2px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+
+#name {
+    margin: 384px auto 0 auto;
+    font-size: 102px;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+#name.fadeIn {
+    margin: 256px auto 0 auto;
+    font-size: 128px;
+    opacity: 1;
+}
+
+#subtitle {
+    margin: 48px auto 0 auto;
+    font-size: 54px;
+    opacity: 0;
+    transition: all 0.75s ease-out;
+}
+#subtitle.fadeIn {
+    margin: 32px auto 0 auto;
+    font-size: 64px;
+    opacity: 1;
+}
+
+#titleArea {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* The image used */
+    background-image: url("chewacla2.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.9);
+
+}
+
+
+
+
+#scrollTip {
+    margin: auto auto 128px auto;
+    opacity: 0;
+    transition: all 1.5s ease-out;
+    cursor: pointer;
+}
+#scrollTip.fadeIn {
+    opacity: 1;
+}
+#scrollTip span {
+	width: 96px;
+	height: 96px;
+    display: block;
+	border-right: 4px solid #fff;
+	border-bottom: 4px solid #fff;
+	transform: rotate(45deg);
+	margin: -48px;
+	animation: animate 2s infinite;
+}
+
+#scrollTip span:nth-child(2) {
+	animation-delay: -0.2s;
+}
+
+#scrollTip span:nth-child(3) {
+	animation-delay: -0.4s;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+		transform: rotate(45deg) translate(10px, 10px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
+#bioPreview {
+    height: 420px;
+}
