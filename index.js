@@ -23,3 +23,9 @@ document.getElementById("scrollTip").onclick = () => {
     });
 
 }
+document.body.onclick= function(e){
+    e=window.event? event.srcElement.parentElement: e.target.parentElement;
+    if(e.className && e.className.indexOf('port-card')!=-1) {
+        window.open(e.getAttribute("data-url"), "_blank");
+    }
+}

@@ -1,3 +1,8 @@
+@font-face {
+    font-family: proxima-nova;
+    src: url(content/ProximaNova-Regular.otf);
+  }
+
 body {
     margin: 0;
 }
@@ -9,7 +14,7 @@ body {
 
 
 html {
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: proxima-nova;
     letter-spacing: -0.4px;
     word-spacing: 0px;
     color: #e9e9e9;
@@ -147,8 +152,80 @@ html {
     color: #03244d;
     font-size: 64px;
     margin: 0;
+    text-align: left;
 }
 .elaboration {
     color: #03244d;
     font-size: 24px;
+}
+
+#resumeSection {
+    padding: 48px;
+}
+
+.resume-image {
+    width: 200px;
+}
+.image-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.image-list li {
+    width: 200px;
+    padding: 16px;
+    margin: auto;
+}
+
+
+
+#portfolioSection {
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,214,214,1) 69%)
+}
+
+
+
+.card {
+    background: white;
+    padding: 0;
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.25);
+    width: 300px;
+    margin: 0 16px;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+}
+.card:hover {
+    transform: scale(1.075);
+}
+
+
+.portfolio-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 200px;
+}
+
+.portfolio-cards .card-footer {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 8px 0;
+    bottom: 0;
+    border-radius: 0 0 8px 8px;
+    color: white;
+    background: rgba(0,0,0,0.45);
+    font-size: 24px;
+}
+
+.portfolio-image {
+    width: 100%;
+    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
 }
