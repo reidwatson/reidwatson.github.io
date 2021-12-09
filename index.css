@@ -1,0 +1,231 @@
+@font-face {
+    font-family: proxima-nova;
+    src: url(content/ProximaNova-Regular.otf);
+  }
+
+body {
+    margin: 0;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+html {
+    font-family: proxima-nova;
+    letter-spacing: -0.4px;
+    word-spacing: 0px;
+    color: #e9e9e9;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    text-shadow: 2px 2px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+
+
+#name {
+    margin: 384px auto 0 auto;
+    font-size: 102px;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+#name.fadeIn {
+    margin: 256px auto 0 auto;
+    font-size: 128px;
+    opacity: 1;
+}
+
+#subtitle {
+    margin: 48px auto 0 auto;
+    font-size: 54px;
+    opacity: 0;
+    transition: all 0.75s ease-out;
+}
+#subtitle.fadeIn {
+    margin: 32px auto 0 auto;
+    font-size: 64px;
+    opacity: 1;
+}
+
+#titleArea {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* The image used */
+    background-image: url("chewacla2.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.9);
+
+}
+
+
+
+
+#scrollTip {
+    margin: auto auto 128px auto;
+    opacity: 0;
+    transition: all 1.5s ease-out;
+    cursor: pointer;
+}
+#scrollTip.fadeIn {
+    opacity: 1;
+}
+#scrollTip span {
+	width: 96px;
+	height: 96px;
+    display: block;
+	border-right: 4px solid #fff;
+	border-bottom: 4px solid #fff;
+	transform: rotate(45deg);
+	margin: -48px;
+	animation: animate 2s infinite;
+}
+
+#scrollTip span:nth-child(2) {
+	animation-delay: -0.2s;
+}
+
+#scrollTip span:nth-child(3) {
+	animation-delay: -0.4s;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+		transform: rotate(45deg) translate(10px, 10px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.bio-picture {
+    width: 30%;
+    display: flex;
+}
+.bio-picture img {
+    height: 360px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 12px -2px #000;
+    margin-right: auto;
+}
+.bio-text {
+    width: 70%;
+}
+
+#bioSection {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,214,214,1) 69%);
+    -webkit-box-shadow: inset 0px 0px 38px -12px #000000; 
+    box-shadow: inset 0px 0px 38px -12px #000000;
+    /* height: 420px; */
+    padding: 48px;
+    text-align: left;
+}
+#bioList {
+    color: #03244d;
+    font-size: 24px;
+}
+
+.section-title {
+    color: #03244d;
+    font-size: 64px;
+    margin: 0;
+    text-align: left;
+}
+.elaboration {
+    color: #03244d;
+    font-size: 24px;
+}
+
+#resumeSection {
+    padding: 48px;
+}
+
+.resume-image {
+    width: 200px;
+}
+.image-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.image-list li {
+    width: 200px;
+    padding: 16px;
+    margin: auto;
+}
+
+
+
+#portfolioSection {
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,214,214,1) 69%)
+}
+
+
+
+.card {
+    background: white;
+    padding: 0;
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.25);
+    width: 300px;
+    margin: 0 16px;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+}
+.card:hover {
+    transform: scale(1.075);
+}
+
+
+.portfolio-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 200px;
+}
+
+.portfolio-cards .card-footer {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 8px 0;
+    bottom: 0;
+    border-radius: 0 0 8px 8px;
+    color: white;
+    background: rgba(0,0,0,0.45);
+    font-size: 24px;
+}
+
+.portfolio-image {
+    width: 100%;
+    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+}
