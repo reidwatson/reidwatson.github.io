@@ -14,6 +14,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
+document.querySelector("span[name='Home']").classList.add('active');
+
+
+
+
 
 document.getElementById("scrollTip").onclick = () => {
 
@@ -22,10 +27,20 @@ document.getElementById("scrollTip").onclick = () => {
         behavior: "smooth"
     });
 
+
+
 }
-document.body.onclick= function(e){
-    e=window.event? event.srcElement.parentElement: e.target.parentElement;
-    if(e.className && e.className.indexOf('port-card')!=-1) {
+document.body.onclick = (e) => {
+    e = window.event ? event.srcElement.parentElement : e.target.parentElement;
+
+
+    if (e.className && e.className.indexOf('port-card') != -1) {
         window.open(e.getAttribute("data-url"), "_blank");
     }
+
+    if (e.className && e.className.indexOf('nav-link')!=-1) {
+        document.location.href = e.querySelector("span").getAttribute("name") + ".html";
+    }
+
+    console.log(e);
 }
